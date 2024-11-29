@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.scientiamanab.github.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sanchez&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(''); /* Placeholder for body image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(90deg, rgba(58,123,213,1) 0%, rgba(0,210,255,1) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .scientia {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: 'Sanchez', serif;
+            font-size: 2rem;
+            color: rgb(165, 42, 42); /* Brown color */
+            font-weight: bold;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            color: magenta;
+        }
+
+        /* Logo Circle */
+        .logo-circle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .logo-circle img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(85, 85, 85, 0.8); /* Light Gray */
+            padding: 6px 12px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid rgba(58, 123, 213, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(58, 123, 213, 0.8);
+            color: white;
+        }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .slides {
+            display: flex;
+            animation: slide 10s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-100%); }
+            50%, 70% { transform: translateX(-200%); }
+            75%, 100% { transform: translateX(-300%); }
+        }
+
+        /* Intro Box */
+        .intro-box {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            animation: slide-in 1s ease-in-out;
+            font-family: 'Sanchez', serif;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        
+        }
+
+        @keyframes slide-in {
+            from {
+                right: -350px;
+                opacity: 0;
+            }
+            to {
+                right: 20px;
+                opacity: 1;
+            }
+        }
+
+        .intro-box h2 {
+            font-size: 1.4rem;
+            color: rgb(211, 47, 47); /* Vibrant Red */
+        }
+
+        .intro-box p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .intro-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            background: linear-gradient(90deg, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        footer .contact {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        footer .contact span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-circle">
+            <!-- Placeholder for logo -->
+            <img src="img/Dbs_logo-removebg-preview.png" alt="School Logo Placeholder">
+        </div>
+        <h1>Welcome to Our Website!</h1>
+        <div class="scientia">SCIENTIA</div>
+    </header>
+
+    <nav>
+        <a href="">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="Exhibition.html">Exhibitions</a>
+        <a href="ScienceClub.html">Science Club</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="game.html">Game</a>
+    </nav>
+    <div class="slider">
+        <div class="slides">
+            <img src="img/Dbs front.jpg" alt="Slide 1">
+            <img src="img/Invitation Card.jpg" alt="Slide 2">
+            <img src="img/Tour.jpg" alt="Slide 3">
+            <img src="img/School.jpg" alt="Slide 4">
+            <img src="img/slide.jpg" alt="Slide 4">
+            <img src="img/Addmission.jpg" alt="Slide 4">
+            <img src="img/Manabp2.jpg" alt="Slide 4">
+            <img src="img/Dbs gateway.jpg" alt="Slide 4">
+            <img src="img/sl1.jpg" alt="Slide 4">
+            <img src="img/Sl2.jpg" alt="Slide 4">
+            <img src="img/Sl4.jpg" alt="Slide 4">
+            <img src="img/Sl3.jpg" alt="Slide 4">
+            <img src="img/Sl5.jpg" alt="Slide 4">
+            <img src="img/Sl6.jpg" alt="Slide 4">
+            <img src="img/Sl7.jpg" alt="Slide 4">
+            
+        </div>
+    </div>
+    <div class="gallery">
+        <img src="img/manabp1.jpg" alt="Gallery Image 1">
+        <img src="img/Manabp2.jpg" alt="Gallery Image 2">
+        <img src="img/Groupz2.jpg" alt="Gallery Image 3">
+        <img src="img/Groupz1.jpg" alt="Gallery Image 4">
+        <img src="img/Froups1.jpg" alt="Gallery Image 4">
+        <img src="img/Groupg1.jpg" alt="Gallery Image 4">
+        <img src="img/Groupf1.jpg" alt="Gallery Image 4">
+        <img src="img/Groupx1.jpg" alt="Gallery Image 4">
+        <img src="img/Groupx2.jpg" alt="Gallery Image 4">
+        <img src="img/Plasmad1.jpg" alt="Gallery Image 4">
+        <img src="img/WhatsApp Image 2024-11-27 at 21.49.12_fca56e1e.jpg" alt="Gallery Image 4">
+        <img src="img/WhatsApp Image 2024-11-27 at 21.49.10_f6cc3e20.jpg" alt="Gallery Image 4">
+        <img src="img/WhatsApp Image 2024-11-27 at 21.49.13_7a4ba6dc.jpg" alt="Gallery Image 4">
+    </div>
+    <div class="intro-box">
+        <img src="img/Dbs front.jpg" alt="Don Bosco School Photo"> <!-- Placeholder for School Image -->
+        <h2>Don Bosco School</h2>
+        <p>Don Bosco School is a beacon of excellence, where education transcends boundaries. Our focus is on developing well-rounded students through innovative teaching methods, extracurricular activities, and a supportive environment.</p>
+    </div>
+    <footer>
+        <div class="contact">
+            <span>Contact: 8822745141</span>
+            <span>Email: your-email@gmail.com</span> <!-- Placeholder for Gmail -->
+        </div>
+    </footer>
+</body>
+</html>

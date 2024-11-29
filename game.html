@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Flower System</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #87CEEB; /* Sky blue background */
+    }
+    .flower {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, pink 30%, white 70%);
+      border-radius: 50%;
+      opacity: 1;
+      animation: fadeOut 5s linear, moveDown 5s linear;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes moveDown {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * window.innerWidth + 'px'; // Random x position
+      flower.style.top = '-20px'; // Start above the screen
+      flower.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Random duration between 4s to 7s
+
+      document.body.appendChild(flower);
+
+      // Remove the flower after its animation ends
+      flower.addEventListener('animationend', () => {
+        flower.remove();
+      });
+    }
+
+    // Generate a flower every 300ms
+    setInterval(createFlower, 300);
+  </script>
+</body>
+</html>

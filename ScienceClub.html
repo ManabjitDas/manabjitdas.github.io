@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Science Club - Don Bosco School</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Welcome Header */
+        header {
+            font-size: 60px;
+            font-family: 'Pacifico', cursive;
+            color: #FFD700;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Search Bar */
+        .search-bar-container {
+            text-align: right;
+            padding: 20px;
+        }
+
+        .search-bar {
+            padding: 12px 15px;
+            width: 350px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Buttons */
+        .buttons {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .buttons button {
+            background: linear-gradient(to right, #4CAF50, #66BB6A);
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            width: 70%;
+            margin: 20px auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-box p {
+            margin: 10px 0;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .teachers {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+
+        .captain {
+            font-family: 'Lora', serif;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        .image-grid .image-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .image-grid p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Arial', sans-serif;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 40px;
+            }
+
+            .info-box {
+                width: 90%;
+            }
+
+            .buttons {
+                position: static;
+                margin: 20px auto;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .buttons button {
+                width: auto;
+                margin: 10px 0;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        // Search bar functionality
+        function searchFunction() {
+            const input = document.getElementById('searchInput').value.toUpperCase();
+            const images = document.querySelectorAll('.image-item');
+            images.forEach(image => {
+                const description = image.querySelector('p').textContent.toUpperCase();
+                image.style.display = description.includes(input) ? "" : "none";
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Welcome Header -->
+    <header>Welcome to Science Club</header>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input class="search-bar" type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for experiments...">
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button onclick="window.location.href='progress.html'">Progress</button>
+        <button onclick="window.location.href='evideos.html'">E-Videos</button>
+        <button onclick="window.location.href='Faculty.html'">Students</button>
+        <button onclick="window.location.href='talent.html'">Talent</button>
+        <button onclick="window.location.href='quiz.html'">Quiz</button>
+    </div>
+
+    <!-- Info Box -->
+    <div class="info-box">
+        <p>Welcome to the Science Club of Don Bosco School!</p>
+        <p>Explore fascinating experiments and learn new scientific concepts.</p>
+        <p class="teachers">Teachers: Priti Rani Saha, Pabina Das Barthakur, Banajit Saha, </p>
+        <p class="captain"> Manabjit Das</p>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="image-grid">
+        <div class="image-item">
+            <img src="img/Carbons2.jpg" alt="Experiment 1">
+            <p>A carbon snake is a chemical reaction that creates a black, snake-like structure by burning a mixture of sugar, baking soda, and gasoline. The reaction produces carbon and carbon dioxide, forming a spongy carbon structure resembling a snake.</p>
+        </div>
+        <div class="image-item">
+            <img src="img/Club1.jpg" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="img/Club2.jpg" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="img/Club3.jpg" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="img/Club4.jpg" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="img/Club5.jpg" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <div class="image-item">
+            <img src="" alt="Experiment 2">
+            <p>Description of Experiment 2</p>
+        </div>
+        <!-- Add more image items as needed -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: <a href="Manabjitdas016@gmail.com">ManabjitDas@Support</a> | Phone: 8453562184 </p>
+    </footer>
+</body>
+</html>

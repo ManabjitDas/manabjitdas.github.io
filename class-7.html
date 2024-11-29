@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 7 Exhibits</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, rgba(255, 99, 71, 1), rgba(30, 144, 255, 1));
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.7);
+            color: gold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Information Box */
+        .info-box {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+
+        .info-box h2 {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        /* Photo Section */
+        .photo-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .photo-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .photo-card p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: lightyellow;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Slide Button */
+        .slide-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: gold;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-button:hover {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">Class 7 Exhibits</div>
+
+    <!-- Information Box -->
+    <div class="info-box">
+        <h2>Class Information</h2>
+        <p><strong>Class Teacher:</strong> Banajit Saha(a) & Sujata Chakraborty(b)</p>
+        <p><strong>Class Captain:</strong> Trisha(a) & Shoham(b) </p>
+        <p><strong>Vice Captain:</strong> Kritika(a) & Sudiksha</p>
+    </div>
+
+    <!-- Photo & Information Section -->
+    <div class="photo-section">
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/300" alt="Exhibit 1">
+            <p>Exhibit 1: [Write details about the exhibit here]</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/300" alt="Exhibit 2">
+            <p>Exhibit 2: [Write details about the exhibit here]</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/300" alt="Exhibit 3">
+            <p>Exhibit 3: [Write details about the exhibit here]</p>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome">THANKYOU</div>
+
+    <!-- Slide Button -->
+    <button class="slide-button" onclick="scrollToTop()">Slide to Top</button>
+
+    <script>
+        // Function to Smoothly Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>
